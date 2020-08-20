@@ -1,0 +1,61 @@
+{
+	"general": {
+		"name": "CRAFT based text region identification",
+		"description": "Character Region Awareness for Text Detection (arXiv:1904.01941)",
+		"developer": "Nicolas Dutly",
+		"affiliation": "University Of Fribourg",
+		"email": "ndutly@student.ethz.ch",
+		"author": "Nicolas Dutly",
+		"DOI": "",
+		"type": "segmentation",
+		"license": "MIT",
+		"ownsCopyright": "0"
+	},
+	"input": [
+		{
+			"file": {
+				"name": "inputImage",
+				"description": "The input image from which to extract text bounding boxes",
+				"options": {
+					"required": true,
+					"mimeType": "image",
+					"mimeTypes": {
+						"allowed": [
+							"image/jpeg",
+							"image/png"
+						],
+						"default": "image/png"
+					}
+				}
+			}
+		},
+		{
+			"outputFolder": {}
+		}
+	],
+	"output": [
+		{
+			"file": {
+				"name": "boundingboxes",
+				"type": "text",
+				"description": "bounding boxes coordinates",
+				"options": {
+					"mimeTypes": {
+						"allowed": [
+							"text/plain"
+						],
+						"default": "text/plain"
+					}
+				}
+			}
+		}
+	],
+	"method": {
+		"inputFolder": "/input/",
+		"imageType": "docker",
+		"imageName": "jumpst3r/craft-pytorch",
+		"testData": "https://drive.google.com/u/0/uc?id=1rxq15u6_TRqyprMjWmJJkSRwFcN-pwTw&export=download",
+		"executableType": "bash",
+		"executable_path": "/input/script.sh"
+	}
+}
