@@ -1,6 +1,6 @@
 {
 	"general": {
-		"name": "CRAFT based text region identification",
+		"name": "CRAFT based text region identificatiodn",
 		"description": "Character Region Awareness for Text Detection (arXiv:1904.01941)",
 		"developer": "Nicolas Dutly",
 		"affiliation": "University Of Fribourg",
@@ -18,7 +18,6 @@
 				"description": "The input image from which to extract text bounding boxes",
 				"options": {
 					"required": true,
-					"mimeType": "image",
 					"mimeTypes": {
 						"allowed": [
 							"image/jpeg",
@@ -36,25 +35,44 @@
 	"output": [
 		{
 			"file": {
+				"name": "Visualization",
+				"type": "image",
+				"description": "Bounding boyes visualization",
+				"options": {
+					"filename":"visual.jpg",
+					"mimeTypes": {
+						"allowed": [
+							"image/jpeg"
+						],
+						"default": "image/jpeg"
+					},
+					"colorspace": "color",
+					"visualization": true
+				}
+			}
+		},
+		{
+			"file": {
 				"name": "boundingboxes",
 				"type": "text",
-				"description": "bounding boxes coordinates",
+				"description": "Bounding boxes coordinates",
 				"options": {
+					"filename":"resbb.txt",
 					"mimeTypes": {
 						"allowed": [
 							"text/plain"
 						],
 						"default": "text/plain"
-					}
+					},
+					"visualization": false
 				}
 			}
 		}
 	],
 	"method": {
-		"inputFolder": "/input/",
 		"imageType": "docker",
 		"imageName": "jumpst3r/craft-pytorch",
-		"testData": "https://drive.google.com/u/0/uc?id=1rxq15u6_TRqyprMjWmJJkSRwFcN-pwTw&export=download",
+		"testData": "https://dl.dropbox.com/s/rddjgn5zb7qyk94/testData.zip",
 		"executableType": "bash",
 		"executable_path": "/input/script.sh"
 	}
