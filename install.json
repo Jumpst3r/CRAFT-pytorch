@@ -54,15 +54,15 @@
 		{
 			"file": {
 				"name": "boundingboxes",
-				"type": "text",
+				"type": "text/csv",
 				"description": "Bounding boxes coordinates",
 				"options": {
-					"filename":"resbb.txt",
+					"filename":"resbb.csv",
 					"mimeTypes": {
 						"allowed": [
-							"text/plain"
+							"text/csv"
 						],
-						"default": "text/plain"
+						"default": "text/csv"
 					},
 					"visualization": false
 				}
