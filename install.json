@@ -1,10 +1,11 @@
 {
 	"general": {
 		"name": "CRAFT based text region identificatiodn",
-		"description": "Character Region Awareness for Text Detection (arXiv:1904.01941)",
+		"description": "Perform word level bounding box generation using state of the art Character Region Awareness for Text Detection (arXiv:1904.01941). Returns a csv file containing bounding box coordinates of earch word.",
 		"developer": "Nicolas Dutly",
 		"affiliation": "University Of Fribourg",
 		"email": "ndutly@student.ethz.ch",
+		"website": "https://github.com/Jumpst3r/CRAFT-pytorch",
 		"author": "Nicolas Dutly",
 		"DOI": "",
 		"type": "segmentation",
@@ -37,7 +38,7 @@
 			"file": {
 				"name": "Visualization",
 				"type": "image",
-				"description": "Bounding boyes visualization",
+				"description": "Bounding boxes visualization: Original document image with superimposed bounding boxes",
 				"options": {
 					"filename":"visual.jpg",
 					"mimeTypes": {
